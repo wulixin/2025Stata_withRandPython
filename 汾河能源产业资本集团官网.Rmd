@@ -1,0 +1,74 @@
+---
+title: "汾河能源产业资本集团"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    theme: cosmo
+    logo: fenhe-logo.png
+    css: styles.css
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+![](fenhe-logo.png){width=90% style="margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px #b3d1f7;"}
+
+### 愿景
+
+> <span style="font-size:1.3em;font-weight:bold;color:#1761a0;">打造国内一流的国资运营平台</span>
+
+### 理念
+
+> <span style="font-size:1.1em;color:#1761a0;">挖掘未来中国的中国最大，明日世界的世界第一</span>
+
+### 关于我们
+
+<span style="font-size:1em;">
+汾河能源产业资本集团专注于国内传统能源、新能源、电力、水电、光伏、油气、页岩气、生物质能等领域的前沿投资，致力于推动能源产业升级与绿色发展。
+</span>
+
+### 联系方式
+
+- <b>邮箱：</b>contact@fenheenergy.com  
+- <b>地址：</b>山西省太原市汾河大道88号
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### 业务领域
+
+```{r}
+library(htmltools)
+tagList(
+  tags$div(style="display:flex;flex-wrap:wrap;gap:20px;",
+    lapply(
+      list(
+        list("传统能源", "煤炭、石油等传统能源投资"),
+        list("新能源", "风能、太阳能等清洁能源"),
+        list("电力", "电力生产与输配"),
+        list("水电", "水力发电及相关投资"),
+        list("光伏", "光伏发电与产业链"),
+        list("油气", "石油天然气勘探与开发"),
+        list("页岩气", "非常规能源开发"),
+        list("生物质能", "绿色可再生能源")
+      ),
+      function(area) {
+        tags$div(
+          style="flex:1 1 220px;min-width:220px;background:#eaf6fb;padding:20px 16px;border-radius:14px;box-shadow:0 2px 8px #b3d1f7;margin-bottom:8px;",
+          tags$h4(style="color:#1761a0;margin-bottom:8px;", area[[1]]),
+          tags$p(style="color:#333;", area[[2]])
+        )
+      }
+    )
+  )
+)
+```
+```
+
+---
+、
